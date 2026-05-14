@@ -106,7 +106,7 @@ Hiện nay nhiều công ty sử dụng các công cụ đơn giản như tin nh
 - Upload source code lên GitHub
 - Hoàn thiện báo cáo và chuẩn bị thuyết trình
 
- Phần sinh viên thực hiện chính
+ Phần em thực hiện 
 - Kiểm thử chức năng
 - Hoàn thiện giao diện
 - Chỉnh sửa và tối ưu hệ thống
