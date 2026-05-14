@@ -200,73 +200,98 @@ Bắt đầu
 9.1. Sequence Diagram — Đăng nhập
 
 User → Login Page: nhập tài khoản
+
 Login Page → Server: gửi dữ liệu
+
 Server → Database: kiểm tra tài khoản
+
 Database → Server: trả kết quả
+
 Server → Login Page: đăng nhập thành công/thất bại
 
 9.2. Sequence Diagram — Tạo công việc
 
 Admin → Task Page: nhập công việc
+
 Task Page → Server: gửi dữ liệu
+
 Server → Database: lưu công việc
+
 Database → Server: xác nhận
+
 Server → Task Page: thông báo thành công
 
 9.3. Sequence Diagram — Cập nhật trạng thái công việc
 
 Nhân viên → Task Page: cập nhật trạng thái
+
 Task Page → Server: gửi trạng thái
+
 Server → Database: cập nhật dữ liệu
+
 Database → Server: xác nhận
+
 Server → Task Page: hiển thị trạng thái mới
 
 10. Class Diagram
     
--Class User
-id
-username
-password
-full_name
-role 
+-Class Người dùng
+ID
+Tên đăng nhập
+Password
+Họ tên
+Vai trò
+Email
+SDT
 
--Class Task
-id
-title
-description
-status
-deadline
-assigned_to
+-Class Công việc
+ID công việc
+Tên công việc
+Mô tả
+Trạng thái
+Hạn hoàn thành
+Ngày tạo
+Người được giao
 
--Class Notification
-id
-content
-user_id
-created_at
+-Class Thông báo
+ID thông báo
+Nội dung
+Ngày tạo
+Người nhận
+Trạng thái
 
 Quan hệ
-User 1 --- * Task
-User 1 --- * Notification
+
+Người dùng 1 --- * Công việc
+
+Người dùng 1 --- * Thông báo
 
 11. Thiết kế cơ sở dữ liệu sơ bộ
     
--Bảng users
-id
-username
-password
-full_name
-role
+-Bảng Người dùng
 
--Bảng tasks
-id
-title
-description
-status
-deadline
-assigned_to
+ID
+Tên đăng nhập
+Password
+Họ tên
+Vai trò
+Email
+SDT
 
--Bảng notifications
-id
-content
-user_id
-created_at
+-Bảng Công việc
+
+ID công việc
+Tên công việc
+Mô tả
+Trạng thái
+Hạn hoàn thành
+Ngày tạo
+Người được giao
+
+-Bảng Thông báo
+
+ID thông báo
+Nội dung
+Ngày tạo
+Người nhận
+Trạng thái
