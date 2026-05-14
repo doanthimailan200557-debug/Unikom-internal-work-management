@@ -49,29 +49,74 @@ Hiện nay nhiều công ty sử dụng các công cụ đơn giản như tin nh
 
  7. Kế hoạch thực hiện
 
- Tuần 1: Phân tích và thiết kế giao diện
-- Tìm hiểu yêu cầu đề tài
-- Xác định chức năng hệ thống
+ Tuần 1: PLAN + Khảo sát + Phân tích yêu cầu
+
+ Công việc thực hiện
+- Xây dựng kế hoạch thực hiện đề tài
+- Tìm hiểu mô hình quản lý công việc nội bộ
+- Xác định các chức năng chính của hệ thống
+- Phân tích yêu cầu cho Admin và Nhân viên
+- Xây dựng Use Case cơ bản
+- Thiết kế sơ bộ giao diện hệ thống
+
+ Phần em thực hiện 
+- Phân tích yêu cầu hệ thống
+- Xác định chức năng cần xây dựng
+- Thiết kế bố cục giao diện
+- Xây dựng nội dung tài liệu
+
+ Phần AI hỗ trợ
+- Gợi ý cấu trúc PLAN
+- Gợi ý Use Case
+- Gợi ý bố cục tài liệu
+- Hỗ trợ mô tả chức năng hệ thống
+
+ Tuần 2: Thiết kế Database + UI + API + Lập trình
+
+ Công việc thực hiện
+- Thiết kế cơ sở dữ liệu MySQL
 - Thiết kế giao diện đăng nhập
-- Thiết kế giao diện trang nhân viên và admin
-
- Tuần 2: Thiết kế cơ sở dữ liệu và chức năng cơ bản
-- Thiết kế database MySQL
-- Tạo bảng tài khoản và công việc
+- Thiết kế giao diện Admin và Nhân viên
 - Xây dựng chức năng đăng nhập/đăng xuất
+- Xây dựng chức năng quản lý công việc
 - Kết nối PHP với MySQL
+- Hiển thị dữ liệu công việc
 
- Tuần 3: Xây dựng chức năng quản lý công việc
-- Xây dựng chức năng thêm công việc
-- Xây dựng chức năng phân công công việc
-- Xây dựng chức năng cập nhật trạng thái công việc
-- Hiển thị danh sách công việc
+ Phần em thực hiện 
+- Thiết kế UI/UX hệ thống 
+- Xây dựng giao diện bằng HTML/CSS
+- Thiết kế database
+- Code các chức năng chính
 
- Tuần 4: Hoàn thiện và kiểm thử
-- Hoàn thiện giao diện hệ thống
-- Kiểm tra và sửa lỗi
+ Phần AI hỗ trợ
+- Gợi ý cấu trúc database
+- Gợi ý giao diện
+- Hỗ trợ viết code mẫu
+- Hỗ trợ sửa lỗi code cơ bản
+
+
+ Tuần 3: Kiểm thử + Hoàn thiện + Release
+
+ Công việc thực hiện
+- Kiểm tra chức năng đăng nhập
+- Kiểm tra chức năng quản lý công việc
+- Kiểm tra giao diện hệ thống
+- Sửa lỗi phát sinh
+- Tối ưu giao diện
+- Upload source code lên GitHub
+- Hoàn thiện báo cáo và chuẩn bị thuyết trình
+
+ Phần sinh viên thực hiện chính
 - Kiểm thử chức năng
-- Hoàn thiện và chuẩn bị thuyết trình
+- Hoàn thiện giao diện
+- Chỉnh sửa và tối ưu hệ thống
+- Chuẩn bị demo
+
+ Phần AI hỗ trợ
+- Gợi ý test case
+- Hỗ trợ tìm lỗi
+- Gợi ý cải thiện giao diện
+- Hỗ trợ tối ưu hóa đoạn code xử lý
 
  8. Kết quả mong muốn
 
