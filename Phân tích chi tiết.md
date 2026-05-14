@@ -198,6 +198,7 @@ Bắt đầu
 9. Sequence Diagram
     
 9.1. Sequence Diagram — Đăng nhập
+
 User → Login Page: nhập tài khoản
 Login Page → Server: gửi dữ liệu
 Server → Database: kiểm tra tài khoản
@@ -205,6 +206,7 @@ Database → Server: trả kết quả
 Server → Login Page: đăng nhập thành công/thất bại
 
 9.2. Sequence Diagram — Tạo công việc
+
 Admin → Task Page: nhập công việc
 Task Page → Server: gửi dữ liệu
 Server → Database: lưu công việc
@@ -212,6 +214,7 @@ Database → Server: xác nhận
 Server → Task Page: thông báo thành công
 
 9.3. Sequence Diagram — Cập nhật trạng thái công việc
+
 Nhân viên → Task Page: cập nhật trạng thái
 Task Page → Server: gửi trạng thái
 Server → Database: cập nhật dữ liệu
@@ -219,6 +222,7 @@ Database → Server: xác nhận
 Server → Task Page: hiển thị trạng thái mới
 
 10. Class Diagram
+    
 -Class User
 id
 username
@@ -245,6 +249,7 @@ User 1 --- * Task
 User 1 --- * Notification
 
 11. Thiết kế cơ sở dữ liệu sơ bộ
+    
 -Bảng users
 id
 username
