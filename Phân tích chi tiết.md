@@ -18,7 +18,7 @@
 
  3. Đối tượng sử dụng hệ thống
 
- 3.1. Admin / Quản lý
+ 3.1. Admin 
 
 Admin là người có quyền quản lý toàn bộ hệ thống:
 - Quản lý tài khoản nhân viên
@@ -94,7 +94,7 @@ Báo cáo công việc
 
 | STT |       Use Case                | Actor            |
 
-| 1   | Đăng nhập hệ thống            | Admin, Nhân viên |
+| 1   | Tổng quát                     | Admin, Nhân viên |
 
 | 2   | Quản lý tài khoản nhân viên   | Admin            |
 
@@ -115,14 +115,44 @@ Báo cáo công việc
 
  6. Phân tích Use Case chi tiết
 
- 6.1. Use Case: Đăng nhập hệ thống
+ 6.1. Use Case tổng quát
 
- Actor
-- Admin
-- Nhân viên
+Mục đích
 
- Mô tả
-Người dùng đăng nhập vào hệ thống bằng tài khoản được cấp.
+   Mô tả chức năng của hệ thống theo từng người dùng.
+
+Actor
+
+    Admin
+    Nhân viên
+  
+Use Case cần có
+
+Admin
+
+   Đăng nhập hệ thống
+   
+   Quản lý tài khoản nhân viên
+
+   Tạo công việc mới
+   
+   Phân công công việc
+   
+   Theo dõi tiến độ công việc
+   
+   Quản lý danh sách công việc
+   
+   Xem báo cáo
+
+Nhân viên
+
+    Đăng nhập hệ thống
+    
+    Xem danh sách công việc được giao
+    
+    Cập nhật trạng thái công việc
+    
+    Báo cáo công việc
 
  6.2. Use Case: Tạo công việc mới
 
