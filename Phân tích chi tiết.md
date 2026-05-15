@@ -93,14 +93,23 @@ Báo cáo công việc
  5.1. Danh sách Use Case
 
 | STT |       Use Case                | Actor            |
+
 | 1   | Đăng nhập hệ thống            | Admin, Nhân viên |
+
 | 2   | Quản lý tài khoản nhân viên   | Admin            |
+
 | 3   | Tạo công việc mới             | Admin            |
+
 | 4   | Phân công công việc           | Admin            |
+
 | 5   | Theo dõi tiến độ công việc    | Admin            |
+
 | 6   | Quản lý danh sách công việc   | Admin            |
+
 | 7   | Xem công việc được giao       | Nhân viên        |
+
 | 8   | Cập nhật trạng thái công việc | Nhân viên        |
+
 | 9   | Xem báo cáo công việc         | Admin            |
 
 
@@ -170,29 +179,49 @@ Admin theo dõi tiến độ công việc của nhân viên.
  8. Activity Diagram
 
  8.1. Activity Diagram — Đăng nhập
+ 
 Bắt đầu
+
 → Nhập tài khoản/mật khẩu
+
 → Kiểm tra dữ liệu
+
 → Đúng?
-   → Có → Vào hệ thống
-   → Không → Báo lỗi
+
+   → Vào hệ thống
+   
+   → Sai → Báo lỗi
+   
 → Kết thúc
 
 8.2. Activity Diagram — Phân công công việc
+
 Bắt đầu
+
 → Admin tạo công việc
+
 → Nhập thông tin
+
 → Chọn nhân viên
+
 → Lưu dữ liệu
+
 → Gửi công việc
+
 → Kết thúc
 
 8.3. Activity Diagram — Cập nhật trạng thái công việc
+
 Bắt đầu
+
 → Nhân viên chọn công việc
+
 → Chọn trạng thái
+
 → Cập nhật dữ liệu
+
 → Hiển thị trạng thái mới
+
 → Kết thúc
 
 9. Sequence Diagram
@@ -235,29 +264,29 @@ Server → Task Page: hiển thị trạng thái mới
 
 10. Class Diagram
     
--Class Người dùng
-ID
-Tên đăng nhập
-Password
-Họ tên
-Vai trò
-Email
+-Class Người dùng:
+ID;
+Tên đăng nhập;
+Password;
+Họ tên;
+Vai trò;
+Email;
 SDT
 
--Class Công việc
-ID công việc
-Tên công việc
-Mô tả
-Trạng thái
-Hạn hoàn thành
-Ngày tạo
+-Class Công việc:
+ID công việc;
+Tên công việc;
+Mô tả;
+Trạng thái;
+Hạn hoàn thành;
+Ngày tạo;
 Người được giao
 
--Class Thông báo
-ID thông báo
-Nội dung
-Ngày tạo
-Người nhận
+-Class Thông báo:
+ID thông báo;
+Nội dung;
+Ngày tạo;
+Người nhận;
 Trạng thái
 
 Quan hệ
@@ -268,30 +297,30 @@ Người dùng 1 --- * Thông báo
 
 11. Thiết kế cơ sở dữ liệu sơ bộ
     
--Bảng Người dùng
+-Bảng Người dùng:
 
-ID
-Tên đăng nhập
-Password
-Họ tên
-Vai trò
-Email
+ID;
+Tên đăng nhập;
+Password;
+Họ tên;
+Vai trò;
+Email;
 SDT
 
--Bảng Công việc
+-Bảng Công việc:
 
-ID công việc
-Tên công việc
-Mô tả
-Trạng thái
-Hạn hoàn thành
-Ngày tạo
+ID công việc;
+Tên công việc;
+Mô tả;
+Trạng thái;
+Hạn hoàn thành;
+Ngày tạo;
 Người được giao
 
--Bảng Thông báo
+-Bảng Thông báo:
 
-ID thông báo
-Nội dung
-Ngày tạo
-Người nhận
+ID thông báo;
+Nội dung;
+Ngày tạo;
+Người nhận;
 Trạng thái
