@@ -258,43 +258,63 @@ Bắt đầu
     
 9.1. Sequence Diagram — Đăng nhập
 
-User → Login Page: nhập tài khoản
+Biểu đồ mô tả quá trình xác thực tài khoản của nhân viên trên hệ thống.
 
-Login Page → Server: gửi dữ liệu
-
-Server → Database: kiểm tra tài khoản
-
-Database → Server: trả kết quả
-
-Server → Login Page: đăng nhập thành công/thất bại
+     Bước 1: Nhân viên nhập thông tin tài khoản vào giao diện Đăng nhập (Login UI).
+     
+     Bước 2: Login UI gửi dữ liệu đăng nhập đến Server.
+     
+     Bước 3: Server gửi yêu cầu kiểm tra thông tin tài khoản xuống Database.
+     
+     Bước 4: Database trả kết quả xác thực về cho Server.
+     
+     Bước 5 (Trường hợp đúng): Nếu tài khoản chính xác, Server phản hồi trạng thái "Đúng tài khoản" tới Login UI.
+     
+     Bước 6: Login UI chuyển hướng và hiển thị trang chủ cho Nhân viên.
+     
+     Bước 7 (Trường hợp sai): Nếu tài khoản sai, Server phản hồi trạng thái "Sai tài khoản" tới Login UI.
+     
+     Bước 8: Login UI thông báo lỗi và yêu cầu Nhân viên nhập lại thông tin.
 
 9.2. Sequence Diagram — Tạo công việc
 
-Admin → Task Page: nhập công việc
+Biểu đồ mô tả quy trình Admin khởi tạo một công việc mới trên hệ thống.
 
-Task Page → Server: gửi dữ liệu
-
-Server → Database: lưu công việc
-
-Database → Server: xác nhận
-
-Server → Task Page: thông báo thành công
+    Bước 1: Admin nhập thông tin công việc mới vào giao diện Task Admin UI.
+    
+    Bước 2: Giao diện gửi dữ liệu công việc đến Server.
+    
+    Bước 3: Server yêu cầu Database kiểm tra tính hợp lệ/trùng lặp của dữ liệu.
+    
+    Bước 4, 5, 6 (Trường hợp trùng): Nếu dữ liệu bị trùng, Database báo về Server, sau đó Server trả thông báo lỗi về UI và yêu cầu Admin nhập lại.
+    
+    Bước 7, 8, 9: Nếu dữ liệu không trùng, Server gửi yêu cầu xác nhận lưu công việc đến giao diện. Admin thực hiện xác nhận lưu trên màn hình.
+    
+    Bước 10, 11: Sau khi xác nhận, Task Admin UI gửi yêu cầu lưu chính thức đến Server.
+    
+    Bước 12, 13: Server thực hiện lệnh lưu công việc vào Database và nhận phản hồi "Lưu thành công".
+    
+    Bước 14: Server gửi thông báo "OK" (Thành công) hiển thị trên màn hình cho Admin.
 
 9.3. Sequence Diagram — Cập nhật trạng thái công việc
 
-Nhân viên → Task Page: cập nhật trạng thái
+Biểu đồ mô tả quá trình nhân viên thay đổi trạng thái tiến độ của một công việc.
 
-Task Page → Server: gửi trạng thái
-
-Server → Database: cập nhật dữ liệu
-
-Database → Server: xác nhận
-
-Server → Task Page: hiển thị trạng thái mới
+    Bước 1: Nhân viên chọn một công việc cụ thể trên giao diện Task Nhân viên UI.
+    
+    Bước 2, 3: UI gửi yêu cầu đến Server, sau đó Server truy xuất thông tin công việc từ Database để kiểm tra.
+    
+    Bước 4, 5: Sau khi xác nhận dữ liệu đúng, Server yêu cầu Nhân viên thực hiện chọn trạng thái mới trên UI.
+    
+    Bước 6, 7: Nhân viên chọn trạng thái và nhấn cập nhật trên giao diện.
+    
+    Bước 8, 9: Dữ liệu trạng thái mới được gửi từ UI đến Server và tiếp tục được gửi xuống Database để kiểm tra tính hợp lệ.
+    
+    Bước 10, 11: Khi Database phản hồi dữ liệu "Hợp lệ", Server gửi tín hiệu cho giao diện để hiển thị trạng thái công việc mới đã được cập nhật thành công.
 
 10. Class Diagram
     
--Class Người dùng:
+-Class Nhân viên:
 ID;
 Tên đăng nhập;
 Password;
@@ -321,13 +341,13 @@ Trạng thái
 
 Quan hệ
 
-Người dùng 1 --- * Công việc
+Nhân viên 1 --- * Công việc
 
-Người dùng 1 --- * Thông báo
+Nhân viên 1 --- * Thông báo
 
 11. Thiết kế cơ sở dữ liệu sơ bộ
     
--Bảng Người dùng:
+-Bảng Nhân viên:
 
 ID;
 Tên đăng nhập;
